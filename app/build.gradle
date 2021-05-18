@@ -4,15 +4,19 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+//赋值与引用
+def cfg = rootProject.ext.android
+def appId = rootProject.ext.appId
+
 android {
-    compileSdkVersion 29
+    compileSdkVersion cfg.compileSdkVersion
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "study.zdf.viewmodeldemo5_16"
-        minSdkVersion 19
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        applicationId appId["app"]
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

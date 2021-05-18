@@ -31,6 +31,6 @@ class MainActivity : AppCompatActivity() {
             viewModel?.setCountDownNumber(2)
         }
 
-        
+
     }
 }
