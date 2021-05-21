@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="study.zdf.twoactivity">
+
+    <application>
+        <activity android:name=".splashActivity">
+        </activity>
+    </application>
+
+</manifest>
