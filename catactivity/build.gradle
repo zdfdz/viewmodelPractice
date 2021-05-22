@@ -8,6 +8,7 @@ apply plugin: 'kotlin-android-extensions'
 //赋值与引用
 def cfg = rootProject.ext.android
 def appId = rootProject.ext.appId
+def depend = rootProject.ext.depend
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -53,7 +54,9 @@ dependencies {
     implementation depend["appcompat"]
     implementation depend["core-ktx"]
     implementation depend["constraintlayout"]
+    implementation project(path: ':arouter')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
 }

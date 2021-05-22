@@ -16,4 +16,23 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
+    <Button
+            android:text="跳转到首页"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_jumpMain_2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_jumpSplash_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+    <Button
+            android:text="跳转到cat页面"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_jumpSplash_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/btn_jumpMain_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

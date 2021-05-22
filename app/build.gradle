@@ -38,6 +38,7 @@ dependencies {
     implementation depend["core-ktx"]
     implementation depend["constraintlayout"]
     testImplementation 'junit:junit:4.12'
+    implementation project(path: ':arouter')
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     if (!isApplication){
