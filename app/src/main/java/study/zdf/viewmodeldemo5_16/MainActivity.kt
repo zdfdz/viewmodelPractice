@@ -7,9 +7,11 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import study.zdf.annotation.BindPath
 import study.zdf.arouter.Arouter
 import study.zdf.catactivity.catActivity
 
+@BindPath(path = "main/main")
 class MainActivity : AppCompatActivity() {
     private var viewModel: numberViewmodel? = null
     private var textView: TextView? = null

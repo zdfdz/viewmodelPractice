@@ -4,10 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
+import study.zdf.annotation.BindPath
 import study.zdf.arouter.Arouter
 
-
+@BindPath(path = "cat/cat")
 class catActivity : AppCompatActivity() {
 
     private var btn_jumpMain: Button? = null

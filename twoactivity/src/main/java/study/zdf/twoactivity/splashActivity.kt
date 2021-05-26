@@ -4,8 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import study.zdf.annotation.BindPath
 import study.zdf.arouter.Arouter
 
+@BindPath(path = "splash/splash")
 class splashActivity : AppCompatActivity() {
 
     private var btn_jumpMain_2: Button? = null

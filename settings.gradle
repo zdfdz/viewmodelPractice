@@ -1,1 +1,1 @@
-include ':app', ':twoactivity', ':catactivity', ':arouter'
+include ':app', ':twoactivity', ':catactivity', ':arouter', ':annotation', ':annotation_compiler', ':common'

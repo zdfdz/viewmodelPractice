@@ -3,6 +3,7 @@ package study.zdf.arouter
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import dalvik.system.DexFile
 import java.util.HashMap
 
 /**
@@ -23,6 +24,37 @@ class Arouter {
 
     fun init(context: Context) {
         this.context = context
+        val className = getClassName("study.zdf.utils")
+        className.forEach {
+            try {
+                val aClazz = Class.forName(it)
+                if (IRouter::class.java.isAssignableFrom(aClazz)) {
+                    val iRouter = aClazz.newInstance() as IRouter
+                    iRouter.putActivity()
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+
+        }
+    }
+
+    private fun getClassName(packageName: String): List<String> {
+        val classList = ArrayList<String>()
+        try {
+            val df = DexFile(context?.packageCodePath)
+            val entries = df.entries()
+            while (entries.hasMoreElements()) {
+                val className = entries.nextElement()
+                if (className.contains(packageName)) {
+                    classList.add(className)
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        return classList
     }
 
     fun getNumber(): Int {
